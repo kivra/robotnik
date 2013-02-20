@@ -1,0 +1,16 @@
+{application, robotnik,
+ [
+  {description, "Dr Robotnik web scraper robot factory"},
+  {vsn, "0.1.0"},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib,
+                  public_key,
+                  crypto,
+                  ssl,
+                  inets
+                 ]},
+  {mod, { robotnik_app, []}},
+  {env, []}
+ ]}.
