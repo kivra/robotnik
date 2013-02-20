@@ -43,7 +43,7 @@
 
 -type method()        :: httpc:method().
 -type request()       :: httpc:request().
--type url()           :: httcp:url().
+-type url()           :: httpc:url().
 -type headers()       :: httpc:headers().
 -type body()          :: httpc:body().
 -type content_type()  :: httpc:content_type().
