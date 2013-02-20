@@ -54,6 +54,8 @@
                        | httpc:request_id().
 -type reason_phrase() :: httcp:reason_phrase().
 
+-type cookie_jar()    :: {cookies, [{url(), binary(), [{binary(), binary()}]}]}.
+
 
 %% -----------------------------------------------------------------------------
 %%
@@ -158,7 +160,7 @@ to_string(E) when is_list(E)    -> E.
 
 
 %% -----------------------------------------------------------------------------
--spec serialize_cookies(url(), headers()) -> tuple().
+-spec serialize_cookies(url(), headers()) -> cookie_jar().
 %% @doc
 %%      Serialize cookies for saving in robot state.
 %%
