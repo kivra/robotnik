@@ -56,6 +56,11 @@
 
 -type cookie_jar()    :: {cookies, [{url(), binary(), [{binary(), binary()}]}]}.
 
+-export_type([cookie_jar/0,
+              reason_phrase/0,
+              result/0,
+              url/0]).
+
 
 %% -----------------------------------------------------------------------------
 %%
