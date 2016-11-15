@@ -25,7 +25,7 @@ kill() ->
 %% then visit the first hit and extract the IP.
 attack(search, _State) ->
     %% search duckduckgo for "what is my ip address"
-    QueryStr = robotnik:payload_encode([{q, "what is my ip address"}]),
+    QueryStr = robotnik:encode_payload([{q, "what is my ip address"}]),
     {ok, {{_HttpVersion, 200, _StatusName}, _Headers, Body}} =
         robotnik:get(?DUCKDUCKGO_URL++ "/?" ++ QueryStr),
 
